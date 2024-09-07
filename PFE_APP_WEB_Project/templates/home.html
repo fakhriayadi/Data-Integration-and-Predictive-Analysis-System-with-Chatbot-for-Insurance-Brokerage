@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+    <style>
+        /* Ajoutez du CSS personnalisé pour styliser les images */
+        .centered-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .full-width-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .logo-image {
+            width: 90px;
+            height: auto;
+            margin-right: 20px;
+            height: 70px;
+        }
+
+        .ml-auto {
+            margin-right: auto;
+            margin-left: 100px;
+        }
+
+        /* CSS pour le fond bleu sur toute la page */
+        body {
+            background-color: #007bff; /* Couleur bleue */
+            color: #ffffff; /* Texte blanc */
+        }
+
+        /* Ajoutez du CSS pour le fond rouge ciel */
+        body {
+            background-color: #fcc; /* Rouge ciel */
+            color: #ffffff; /* Texte blanc */
+        }
+
+        /* Ajoutez du CSS pour le conteneur principal */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* CSS pour la section de description du projet */
+        .project-description {
+            flex: 1; /* Prend autant d'espace que possible */
+            padding: 0 20px; /* Espace intérieur pour le contenu */
+        }
+
+        /* CSS pour styliser l'image */
+        .project-image {
+            flex: 1; /* Prend autant d'espace que possible */
+            text-align: right; /* Aligner l'image à droite */
+        }
+
+        .project-image img {
+            max-width: 100%; /* Taille maximale de l'image */
+            height: auto;
+        }
+    </style>
+
+    <title>As Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+
+<div class="bg-nav d-flex align-items-center" style="background-color: #FBDDDF; color: #000000; padding: 10px;">
+    <img src="{{url_for('static',filename='As-Solutions.png')}}" alt="ASolutions Logo" class="logo-image">
+    <h5 class="my-0 mr-md-auto font-weight-normal"></h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-danger me-2" href="/home">Page d'accueil</a>
+        <a class="p-2 text-danger me-2" href="/dashboard">Tableau De Bord /Chatbot</a>
+        <a class="p-2 text-danger me-2" href="/predict">Prédiction Par Date De Souscription</a>
+        <a class="p-2 text-danger me-2" href="/predict4">Prédiction Par Gamme</a>
+        <a class="p-2 text-danger me-2" href="/predict6">Prédiction Par Courtier</a>
+    </nav>
+        <!--<a class="btn btn-outline-danger ml-auto" href="/logout">Se Déconnecter</a> -->
+
+    <a class="btn btn-outline-danger ms-auto" href="/logout">Se Déconnecter</a>
+</div>
+<!--
+    <div class="bg-nav d-flex align-items-center" style="background-color: #FBDDDF; color: #000000; padding: 10px;">
+        <img src="{{url_for('static',filename='As-Solutions.png')}}" alt="ASolutions Logo" class="logo-image">
+        <h5 class="my-0 mr-md-auto font-weight-normal"></h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+            <a class="p-2 text-danger" href="/home">Page d'accueil</a>
+            <a class="p-2 text-danger" href="/dashboard">Tableau De Bord /Chatbot</a>
+            <a class="p-2 text-danger" href="/predict">Prédiction Par Date De Souscription</a>
+            <a class="p-2 text-danger" href="/predict4">Prédiction Par Gamme</a>
+            <a class="p-2 text-danger" href="/predict6">Prédiction Par Courtier</a>
+
+
+        </nav>
+        <a class="btn btn-outline-danger ml-auto" href="/logout">Se Déconnecter</a>
+    </div> -->
+
+    <div class="container">
+        <div class="project-description">
+            <h2>Analyse, Conception et Déploiement d'un Système d'Intégration de Données et d'Analyse Prédictive avec Chatbot pour le Courtage en Assurance</h2>
+            <br>
+            <br>
+            <p style="font-size: 20px;">Notre projet vise à impliquer une analyse exhaustive du processus d'intégration de données spécifique au secteur de l'assurance, concevoir des KPI et déployer des tableaux de bord personnalisés. Il utilise l'analyse prédictive pour optimiser les activités de courtage et intègre un chatbot pour améliorer l'accessibilité et l'interactivité des tableaux de bord.</p>
+            <!--<p style="font-size: 20px;">Notre projet vise à impliquer une analyse exhaustive du processus d'intégration de données spécifique au secteur de l'assurance. Il englobe la conception et l'établissement d'un ensemble complet d'indicateurs clés de performance (KPI), ainsi que le déploiement de tableaux de bord personnalisés pour répondre aux exigences spécifiques d'un courtier en assurance. En outre, il intègre de manière stratégique l'analyse prédictive pour anticiper les tendances du marché et optimiser les activités de courtage. L'intégration d'un chatbot dans ces tableaux de bord permet d'améliorer l'accessibilité et l'interactivité, augmentant ainsi la valeur ajoutée du système.</p> -->
+
+           <!-- <p style="font-size: 25px;">Ce projet vise à analyser, concevoir et déployer un Système d'Intégration de Données et d'Analyse Prédictive avec Chatbot, visant à améliorer la performance globale du courtage en assurance.</p> -->
+
+        </div>
+
+        <div class="project-image">
+            <img src="{{url_for('static',filename='chatbot.png')}}" alt="Image du projet Neopolis" class="full-width-image centered-image">
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9XoXAB7BZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+<!-- <a class="p-2 text-danger" href="/predict2">Prediction2</a> -->
+          <!--  <a class="p-2 text-danger" href="/description">Description</a>
+            <a class="p-2 text-danger" href="/aboutus">About us</a>
+            <a class="p-2 text-danger" href="/chatbot">Chatbot</a>-->

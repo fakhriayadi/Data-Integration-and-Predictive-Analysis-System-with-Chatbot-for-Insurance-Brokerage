@@ -1,0 +1,210 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Ajoutez du CSS personnalisé pour styliser les images */
+        body {
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .centered-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .full-width-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .logo-image {
+            width: 90px;
+            height: auto;
+            margin-right: 20px;
+            height: 70px;
+        }
+
+        .ml-auto {
+            margin-right: auto;
+            margin-left: 100px;
+        }
+
+        /* CSS pour le fond bleu sur toute la page */
+        body {
+            background-color: #007bff; /* Couleur bleue */
+            color: #ffffff; /* Texte blanc */
+        }
+
+        /* Ajoutez du CSS pour la section de description du projet */
+        .project-description {
+            padding: 50px 20px; /* Espace intérieur pour le contenu */
+            text-align: center; /* Centrer le texte */
+        }
+
+        /* Ajoutez du CSS pour styliser l'image et la description */
+        .project-image {
+            margin-top: 20px; /* Marge au-dessus de l'image */
+            text-align: left; /* Aligner l'image à gauche */
+        }
+
+        .project-image img {
+            max-width: 50%; /* Réduire la largeur de l'image à 50% */
+            height: auto;
+            margin-bottom: 20px; /* Marge en dessous de l'image */
+        }
+
+        #container {
+            max-width: 800px; /* Largeur maximale */
+            width: 450px; /* Largeur fixe */
+            margin: 0;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+
+
+        #chatbox {
+            max-height: 400px;
+            overflow-y: auto;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        #usermsg {
+            width: calc(100% - 80px);
+            padding: 5px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        #submitmsg {
+            width: 70px;
+            padding: 5px;
+            margin-top: 10px;
+            background-color: #E30316;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        #submitmsg:hover {
+            background-color: #E30316;
+        }
+
+        h1 {
+            color: #E30316 !important;
+        }
+
+
+
+        /* Le reste de vos styles CSS ici */
+
+    </style>
+
+    <title>ASolutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+
+<body>
+
+ <div class="bg-nav d-flex align-items-center" style="background-color: #FBDDDF; color: #000000; padding: 30px;">
+    <!--<img src="{{url_for('static',filename='As-Solutions.png')}}" alt="ASolutions Logo" class="logo-image">
+    <h5 class="my-0 mr-md-auto font-weight-normal">ASolutions</h5> -->
+    <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-danger mx-2" href="/home">Page d'accueil</a>
+        <a class="p-2 text-danger mx-2" href="/dashboard">Tableau De Bord /Chatbot</a>
+        <a class="p-2 text-danger mx-2" href="/predict">Prédiction Par Date De Souscription</a>
+        <a class="p-2 text-danger mx-2" href="/predict4">Prédiction Par Gamme</a>
+        <a class="p-2 text-danger mx-2" href="/predict6">Prédiction Par Courtier</a>
+        <!--  <a class="p-2 text-danger" href="/description">Description</a>
+            <a class="p-2 text-danger" href="/aboutus">About us</a>
+            <a class="p-2 text-danger" href="/chatbot">Chatbot</a>-->
+    </nav>
+   <!-- <a class="btn btn-outline-danger ml-auto" href="/logout">Se Déconnecter</a> -->
+     <a class="btn btn-outline-danger ms-auto" href="/logout">Se Déconnecter</a>
+
+</div>
+
+
+</div>
+<div style="margin-left: 0;">
+    <iframe title="Dashboard_Courtage en Assurance-VersionFinale" width="1000" height="800" src="https://app.powerbi.com/reportEmbed?reportId=63d90742-5cb4-4612-9fe8-ea5b898c0684&autoAuth=true&ctid=604f1a96-cbe8-43f8-abbf-f8eaf5d85730" frameborder="0" allowFullScreen="true"></iframe>
+</div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+
+    <div id="container">
+        <h1 onclick="toggleChatbox()">Chatbot</h1>
+        <div id="chatbox"></div>
+        <input type="text" id="usermsg" placeholder="Posez une question...">
+        <button id="submitmsg">Envoyer</button>
+    </div>
+
+    <script>
+        function toggleChatbox() {
+            var chatbox = document.getElementById("container");
+            if (chatbox.style.display === "none") {
+                chatbox.style.display = "block";
+            } else {
+                chatbox.style.display = "none";
+            }
+        }
+
+        $(document).ready(function(){
+            $("#submitmsg").click(function(){
+                var usermsg = $("#usermsg").val();
+                $.get("/get",{msg: usermsg}).done(function(data){
+                    $("#chatbox").append("<p><strong>Vous:</strong> " + usermsg + "</p>");
+                    $("#chatbox").append("<p><strong>Chatbot:</strong> ");
+                    typeWriter(data, 0, function () {
+                        $("#chatbox").append("</p>");
+                    });
+                    $("#usermsg").val("");
+                });
+            });
+        });
+
+        function typeWriter(text, i, cb) {
+            if (i < text.length) {
+                document.getElementById("chatbox").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(function () { typeWriter(text, i, cb) }, 50);
+            } else {
+                cb();
+            }
+        }
+        function toggleChatbox() {
+            var chatbox = document.getElementById("container");
+            if (chatbox.style.height === "70px") {
+                chatbox.style.height = "620px"; // Restaurer la taille normale de la boîte
+            } else {
+                chatbox.style.height = "70px"; // Réduire la taille de la boîte
+            }
+        }
+    </script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>As Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.3/lottie.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa; /* Background color */
+        }
+
+        .card-body {
+            background-color: #E30316; /* Background color for the rectangle */
+            height: 50x; /* Set the height to 300 pixels */
+        }
+
+        .register-link {
+            color: white; /* Text color for "Register Now" */
+        }
+
+        .text-white {
+            color: white; /* White text color */
+        }
+
+        .btn-red {
+            background-color: #FBDDDF; /* Fixed red button background color */
+            border-color: #FBDDDF; /* Fixed red button border color */
+            color: #000000; /* Fixed red button text color */
+        }
+
+        .btn-red:hover {
+            background-color: #FBDDDF; /* Fixed red button background color on hover */
+            border-color: #FBDDDF; /* Fixed red button border color on hover */
+            color: #000000; /* Fixed red button text color on hover */
+        }
+
+         #animation-container {
+            width: 100%;
+            max-width: 800px;
+            height: 600px; /* Add height to increase the size */
+            margin: 0 auto;
+        }
+     .welcome-message {
+            color: #E30316; /* Red color for the welcome message */
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="text-light display-4 mt-5" style="font-size:70px"></h1>
+                <div class="welcome-message">Bienvenue à notre site !</div>
+                <div id="animation-container"></div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mt-5">
+                    <div class="card-body">
+                        <form class="form" method="post" action="/login_validation">
+                            <label class="text-white">Email</label><br>
+                            <input type="email" class="form-control" name="email"><br>
+                            <label class="text-white">Mot De Passe</label><br>
+                            <input type="password" class="form-control" name="password"><br><br>
+                            <input type="submit" class="btn btn-red btn-block btn-lg" value="Se Connecter">
+                        </form>
+                        <p class="mt-2 text-dark">Pas un membre? <a href="/register" class="register-link">S'inscrire</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var animContainer = document.getElementById('animation-container');
+        var anim = bodymovin.loadAnimation({
+            container: animContainer,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'static/Animation - 1716280691331.json' // Remplacez par le chemin de votre fichier JSON
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+
+</html>
